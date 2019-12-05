@@ -6,12 +6,15 @@
 #X obj 275 324 readsf~;
 #X obj 117 211 delay 500;
 #X msg 121 260 start;
-#X obj 230 502 output~;
-#X obj 380 503 wsprobe~;
-#X obj 346 362 hsl 128 15 0 10000 0 0 empty empty cut-off_frequency
--2 -8 0 10 -262144 -1 -1 700 1;
-#X floatatom 338 395 5 0 0 0 - - -;
-#X obj 257 414 hip~;
+#X obj 262 745 output~;
+#X obj 406 749 wsprobe~;
+#X obj 288 374 hsl 128 15 0 10000 0 0 empty empty centre_frequency
+-2 -8 0 10 -262144 -1 -1 100 1;
+#X floatatom 285 436 5 0 0 0 - - -;
+#X obj 280 585 bp~;
+#X floatatom 297 529 5 0 0 0 - - -;
+#X obj 300 478 hsl 128 15 0 127 0 0 empty empty Q -2 -8 0 10 -262144
+-1 -1 100 1;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 1 0 2 0;
@@ -26,3 +29,5 @@
 #X connect 10 0 6 0;
 #X connect 10 0 6 1;
 #X connect 10 0 7 0;
+#X connect 11 0 10 2;
+#X connect 12 0 11 0;

@@ -1,0 +1,8 @@
+#!/bin/sh
+# Requires pdflatex
+
+FILENAME=simon-fish_zheming-qiu
+pdflatex "$FILENAME.tex"
+
+# Delete compile files
+rm "$FILENAME.aux" "$FILENAME.out" "$FILENAME.log"

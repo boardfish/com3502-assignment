@@ -1,4 +1,4 @@
-#N canvas 995 89 925 991 12;
+#N canvas 945 89 925 991 12;
 #X obj 264 138 loadbang;
 #X obj 268 194 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -12,7 +12,7 @@
 #X obj 299 635 -~;
 #X obj 331 532 sig~;
 #X obj 345 468 hsl 128 15 1 1000 0 0 empty empty delay -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 337 567 vd~ delayline;
 #X obj 328 373 delwrite~ delayline 1000;
 #X obj 377 321 r~ feedback;
@@ -22,6 +22,25 @@
 -262144 -1 -1 0 1;
 #X obj 475 673 *~;
 #X obj 483 742 s~ feedback;
+#N canvas 995 89 925 991 LFO~ 1;
+#X obj 275 323 osc~;
+#X floatatom 277 226 5 0 0 0 - - -;
+#X obj 275 278 sig~;
+#X floatatom 378 250 5 0 0 0 - - -;
+#X obj 332 367 *~;
+#X obj 382 293 *~ 0.01;
+#X obj 286 138 inlet;
+#X obj 418 128 inlet;
+#X obj 334 518 outlet~;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 5 0;
+#X connect 4 0 8 0;
+#X connect 5 0 4 1;
+#X connect 6 0 1 0;
+#X connect 7 0 3 0;
+#X restore 91 660 pd LFO~;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 1 0 2 0;

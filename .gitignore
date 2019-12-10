@@ -1,4 +1,6 @@
 *.aux
 *.log
 *.out
+*.fdb_latexmk
+*.fls
 simon-fish_zheming-qiu.pdf

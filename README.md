@@ -33,7 +33,7 @@ You should then be able to run `scripts/build` to update the PDF.
 Let's use this to keep track of which questions we've completed.
 
 - [x] 1
-- [ ] 2
+- [x] 2
 - [ ] 3
 - [ ] 4
 - [ ] 5 - **LFO**

@@ -3,4 +3,5 @@
 *.out
 *.fdb_latexmk
 *.fls
+*.synctex.gz
 simon-fish_zheming-qiu.pdf

@@ -1,0 +1,44 @@
+# Speech assignment
+
+## Installation instructions (Ubuntu))
+
+### Pure Data
+
+Install Pd:
+
+```
+sudo apt install puredata
+```
+
+Open Pure Data.
+
+In `File > Preferences > Path`, add this folder. This should allow you to make a `wsprobe~` object.
+
+In `Help > Find externals > Preferences`, check "Should newly installed libraries be added to Pd's search path?"
+
+In `Help > Find externals`, search for `else` and install it.
+
+### Compiling the TeX PDF.
+
+Install a TeX distribution:
+
+```
+sudo apt install texlive-full
+```
+
+You should then be able to run `scripts/build` to update the PDF.
+
+## Questions
+
+Let's use this to keep track of which questions we've completed.
+
+- [ ] 1
+- [ ] 2
+- [ ] 3
+- [ ] 4
+- [ ] 5 - **LFO**
+- [ ] 6
+- [ ] 7
+- [ ] 8 **LFO required**
+- [ ] 9
+- [ ] 10 - Voice changer **LFO required**

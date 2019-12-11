@@ -8,9 +8,9 @@
 #X obj 444 710 bng 15 250 50 0 reset empty RESET 17 7 0 10 -262144
 -1 -1;
 #X obj 448 749 hsl 128 15 0 50 0 0 speed speed SPEED -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 10200 1;
 #X obj 448 788 hsl 128 15 0 1 0 0 depth depth DEPTH -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 6700 1;
 #X floatatom 588 746 5 0 0 0 - speed -;
 #X floatatom 588 786 5 0 0 0 - depth -;
 #X text 532 696 sine;
@@ -42,8 +42,17 @@
 #X obj 146 353 *~;
 #X obj 343 346 *~;
 #X obj 294 321 != 1;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array amplitude 100 float 2;
+#X coords 0 -0.01 100 0.01 200 140 1 0 0;
+#X restore 1112 338 graph;
+#X obj 518 595 tabwrite~ amplitude;
+#X obj 534 550 metro 100;
+#X obj 559 499 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
+#X connect 1 0 40 0;
 #X connect 2 0 1 1;
 #X connect 12 0 15 0;
 #X connect 12 0 14 0;
@@ -70,4 +79,6 @@
 #X connect 36 0 1 0;
 #X connect 37 0 1 0;
 #X connect 38 0 37 1;
+#X connect 41 0 40 0;
+#X connect 42 0 41 0;
 #X coords 0 -1 1 1 200 150 1 435 670;

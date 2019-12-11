@@ -22,7 +22,7 @@
 -262144 -1 -1 0 1;
 #X obj 475 673 *~;
 #X obj 483 742 s~ feedback;
-#N canvas 828 89 925 991 LFO~ 0;
+#N canvas 778 89 925 991 LFO~ 0;
 #X obj 275 323 osc~;
 #X floatatom 277 226 5 0 0 0 - speed -;
 #X obj 275 278 sig~;
@@ -37,7 +37,7 @@
 #X obj 361 672 hsl 128 15 0 50 0 0 speed speed SPEED -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 361 711 hsl 128 15 0 1 0 0 depth depth DEPTH -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 6500 1;
 #X floatatom 501 669 5 0 0 0 - speed -;
 #X floatatom 501 709 5 0 0 0 - depth -;
 #X text 445 619 sine;
@@ -54,6 +54,10 @@
 #X obj 82 506 clip 0 50;
 #X obj 175 509 clip 0 1;
 #X obj 756 299 inlet;
+#X obj 82 703 outlet;
+#X obj 172 705 outlet;
+#X floatatom 81 652 5 0 0 0 - speed -;
+#X floatatom 173 654 5 0 0 0 - depth -;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
@@ -70,12 +74,16 @@
 #X connect 25 0 22 0;
 #X connect 26 0 18 0;
 #X connect 26 0 17 0;
+#X connect 29 0 27 0;
+#X connect 30 0 28 0;
 #X coords 0 -1 1 1 200 150 1 350 600;
-#X restore 44 528 pd LFO~ 23 1;
+#X restore 45 533 pd LFO~ 23 1;
 #X floatatom 39 458 5 0 0 0 - - -;
 #X floatatom 208 461 5 0 0 0 - - -;
 #X obj 259 491 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
+#X floatatom 46 739 5 0 0 0 - - -;
+#X floatatom 128 743 5 0 0 0 - - -;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 1 0 2 0;
@@ -99,6 +107,8 @@
 #X connect 16 0 18 1;
 #X connect 17 0 15 0;
 #X connect 18 0 19 0;
+#X connect 20 0 24 0;
+#X connect 20 1 25 0;
 #X connect 21 0 20 0;
 #X connect 22 0 20 1;
 #X connect 23 0 20 2;

@@ -6,37 +6,34 @@
 #X obj 275 324 readsf~;
 #X obj 117 211 delay 500;
 #X msg 121 260 start;
-#X obj 262 745 output~;
-#X obj 380 746 wsprobe~;
-#X floatatom 329 498 5 0 0 0 - - -;
-#X obj 299 635 -~;
-#X obj 331 532 sig~;
-#X obj 345 468 hsl 128 15 1 1000 0 0 empty empty delay -2 -8 0 10 -262144
+#X obj 364 739 output~;
+#X obj 482 740 wsprobe~;
+#X floatatom 431 492 5 0 0 0 - - -;
+#X obj 401 629 -~;
+#X obj 433 526 sig~;
+#X obj 447 462 hsl 128 15 1 1000 0 0 empty empty delay -2 -8 0 10 -262144
 -1 -1 0 1;
-#X obj 337 567 vd~ delayline;
+#X obj 439 561 vd~ delayline;
 #X obj 328 373 delwrite~ delayline 1000;
 #X obj 377 321 r~ feedback;
-#X floatatom 553 500 5 0 0 0 - - -;
-#X obj 555 534 sig~;
-#X obj 569 470 hsl 128 15 1 1000 0 0 empty empty feedback -2 -8 0 10
+#X floatatom 655 494 5 0 0 0 - - -;
+#X obj 657 528 sig~;
+#X obj 671 464 hsl 128 15 1 1000 0 0 empty empty feedback -2 -8 0 10
 -262144 -1 -1 0 1;
-#X obj 475 673 *~;
-#X obj 483 742 s~ feedback;
+#X obj 577 667 *~;
+#X obj 585 736 s~ feedback;
 #X floatatom 39 458 5 0 0 0 - - -;
-#X floatatom 208 461 5 0 0 0 - - -;
-#X obj 259 491 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X floatatom 141 459 5 0 0 0 - - -;
+#X obj 255 462 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X floatatom 46 739 5 0 0 0 - - -;
 #X floatatom 128 743 5 0 0 0 - - -;
-#N canvas 778 89 925 991 LFO~ 0;
-#X obj 275 323 osc~;
-#X floatatom 277 226 5 0 0 0 - speed -;
-#X obj 275 278 sig~;
+#N canvas 904 165 925 991 LFO~ 1;
 #X floatatom 378 250 5 0 0 0 - depth -;
-#X obj 332 367 *~;
+#X obj 348 434 *~;
 #X obj 382 293 *~ 0.01;
 #X obj 334 518 outlet~;
-#X obj 428 622 vradio 15 1 0 2 empty empty wave_type 0 -8 0 10 -262144
+#X obj 428 622 vradio 15 1 0 2 wavetype empty wave_type 0 -8 0 10 -262144
 -1 -1 0;
 #X obj 357 633 bng 15 250 50 0 reset empty RESET 17 7 0 10 -262144
 -1 -1;
@@ -64,24 +61,45 @@
 #X obj 172 705 outlet;
 #X floatatom 81 652 5 0 0 0 - speed -;
 #X floatatom 173 654 5 0 0 0 - depth -;
-#X connect 0 0 4 0;
-#X connect 1 0 2 0;
-#X connect 2 0 0 0;
-#X connect 3 0 5 0;
-#X connect 4 0 6 0;
-#X connect 5 0 4 1;
-#X connect 15 0 18 0;
-#X connect 15 0 17 0;
-#X connect 17 0 16 0;
-#X connect 18 0 19 0;
-#X connect 20 0 25 0;
-#X connect 23 0 24 0;
-#X connect 24 0 21 0;
-#X connect 25 0 22 0;
-#X connect 26 0 18 0;
-#X connect 26 0 17 0;
-#X connect 29 0 27 0;
-#X connect 30 0 28 0;
+#X obj 97 160 receive wavetype;
+#X floatatom 101 207 5 0 0 0 - - -;
+#X obj 186 91 osc~;
+#X floatatom 184 1 5 0 0 0 - speed -;
+#X obj 186 46 sig~;
+#X obj 103 243 == 1;
+#X obj 12 167 *~ 9001;
+#X obj 14 219 clip~ -1 1;
+#X obj 59 276 *~;
+#X obj 256 269 *~;
+#X obj 207 244 != 1;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 12 0 15 0;
+#X connect 12 0 14 0;
+#X connect 14 0 13 0;
+#X connect 15 0 16 0;
+#X connect 17 0 22 0;
+#X connect 20 0 21 0;
+#X connect 21 0 18 0;
+#X connect 22 0 19 0;
+#X connect 23 0 15 0;
+#X connect 23 0 14 0;
+#X connect 26 0 24 0;
+#X connect 27 0 25 0;
+#X connect 28 0 29 0;
+#X connect 29 0 33 0;
+#X connect 29 0 38 0;
+#X connect 30 0 34 0;
+#X connect 30 0 37 0;
+#X connect 31 0 32 0;
+#X connect 32 0 30 0;
+#X connect 33 0 36 1;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 36 0 1 0;
+#X connect 37 0 1 0;
+#X connect 38 0 37 1;
 #X coords 0 -1 1 1 200 150 1 350 600;
 #X restore 45 533 pd LFO~;
 #X connect 0 0 1 0;

@@ -37,7 +37,7 @@ Let's use this to keep track of which questions we've completed.
 - [x] 3 - not sure about my answer to this one, could use some polish
 - [x] 4 - not sure about my answer to this one, it's short
 - [ ] 5 - **LFO**
-- [ ] 6
+- [x] 6
 - [ ] 7
 - [ ] 8 **LFO required**
 - [ ] 9

@@ -38,7 +38,7 @@ Let's use this to keep track of which questions we've completed.
 - [x] 4 - not sure about my answer to this one, it's short
 - [ ] 5 - **LFO**
 - [x] 6
-- [ ] 7
+- [x] 7
 - [ ] 8 **LFO required**
 - [ ] 9
 - [ ] 10 - Voice changer **LFO required**

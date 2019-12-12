@@ -14,7 +14,7 @@
 #X obj 255 234 inlet~;
 #X floatatom 569 196 10 0 0 0 - frequencyshift -;
 #X obj 572 169 hsl 128 15 -1000 1000 0 0 frequencyshift frequencyshift
-Frequency_Shift -2 -8 0 10 -262144 -1 -1 6331 1;
+Frequency_Shift -2 -8 0 10 -262144 -1 -1 6350 1;
 #X obj 650 198 bng 15 250 50 0 reset empty RESET 19 8 0 10 -262144
 -1 -1;
 #X obj 557 339 receive reset;
@@ -38,4 +38,4 @@ Frequency_Shift -2 -8 0 10 -262144 -1 -1 6331 1;
 #X connect 16 0 17 0;
 #X connect 17 0 19 0;
 #X connect 19 0 18 0;
-#X coords 0 -1 1 1 150 75 1 560 150;
+#X coords 0 -1 1 1 150 90 1 560 135;

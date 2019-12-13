@@ -1,4 +1,4 @@
-#N canvas 70 94 925 991 12;
+#N canvas 70 89 925 991 12;
 #X obj 264 138 loadbang;
 #X obj 268 194 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -7,7 +7,7 @@
 #X obj 117 211 delay 500;
 #X msg 121 260 start;
 #X obj 258 586 output~;
-#X obj 466 364 Vibrato~;
+#X obj 462 367 Vibrato~;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 1 0 2 0;

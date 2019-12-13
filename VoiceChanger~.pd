@@ -1,0 +1,9 @@
+#N canvas 70 89 1850 991 12;
+#X obj 949 131 adc~;
+#X obj 511 339 FrequencyShifter~;
+#X obj 902 609 outlet~;
+#X obj 1021 126 inlet~;
+#X obj 710 339 Vibrato~;
+#X obj 1012 341 GraphicEqualiser~;
+#X obj 233 339 Delay~;
+#X text 969 83 Want to choose which of these two to enable;

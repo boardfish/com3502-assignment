@@ -1,0 +1,5 @@
+#N canvas 995 89 925 991 12;
+#X obj 266 588 output~;
+#X obj 316 404 VoiceChanger~;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;

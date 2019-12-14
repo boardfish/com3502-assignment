@@ -1,8 +1,8 @@
 #N canvas 70 89 450 300 12;
-#X obj 24 72 LFO~;
 #X text 237 44 LOW FREQUENCY OSCILLATOR;
 #X text 242 83 LFO~ produces an audio signal as either a sine or square
 wave. It is possible to change the speed and depth of the wave \, either
 via inlets or using the available sliders.;
 #X obj 216 232 wsprobe~;
-#X connect 0 2 3 0;
+#X obj 24 72 LFO~ 25 0.3;
+#X connect 3 2 2 0;

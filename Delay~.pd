@@ -10,9 +10,9 @@
 #X obj 81 490 outlet~;
 #X obj 81 383 +~;
 #X obj 94 73 hsl 128 15 0 1000 0 0 delay delay delay -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 5800 1;
 #X obj 93 125 hsl 128 15 0 1 0 0 feedback feedback feedback -2 -8 0
-10 -262144 -1 -1 0 1;
+10 -262144 -1 -1 8400 1;
 #X floatatom 243 71 5 0 0 0 - delay -;
 #X floatatom 244 124 5 0 0 0 - feedback -;
 #X obj 217 488 s~ feedbackloop;
@@ -28,7 +28,7 @@
 #X obj 123 256 delwrite~ delayline 1000;
 #X obj 425 400 loadbang;
 #X msg 431 441 clear;
-#X obj 428 483 delwrite~ delayline;
+#X obj 428 483 delwrite~ delayline 1000;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 9 1;

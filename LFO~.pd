@@ -1,16 +1,16 @@
-#N canvas 285 121 1387 727 12;
+#N canvas 70 89 1850 991 12;
 #X floatatom 465 327 5 0 0 0 - depth -;
 #X obj 435 511 *~;
 #X obj 469 370 *~ 0.01;
 #X obj 421 595 outlet~;
 #X obj 515 699 vradio 15 1 0 2 wavetype empty wave_type 0 -8 0 10 -262144
 -1 -1 0;
-#X obj 444 710 bng 15 250 50 0 R empty RESET 17 7 0 10 -262144 -1 -1
-;
+#X obj 444 710 bng 15 250 50 0 lfo_reset empty RESET 17 7 0 10 -262144
+-1 -1;
 #X obj 448 749 hsl 128 15 0 50 0 0 speed speed SPEED -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 6350 1;
 #X obj 448 788 hsl 128 15 0 1 0 0 depth depth DEPTH -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 3810 1;
 #X floatatom 588 746 5 0 0 0 - speed -;
 #X floatatom 588 786 5 0 0 0 - depth -;
 #X text 532 696 sine;
@@ -50,11 +50,11 @@
 #X obj 742 148 loadbang;
 #X obj 698 318 f \$1;
 #X obj 846 295 f \$2;
-#X obj 860 148 receive R;
 #X msg 727 249 send speed;
 #X msg 842 241 send depth;
 #X obj 690 370 send speed;
 #X obj 851 373 send depth;
+#X obj 860 148 receive lfo_reset;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 1 0 37 0;
@@ -82,10 +82,10 @@
 #X connect 39 0 38 0;
 #X connect 40 0 41 0;
 #X connect 40 0 42 0;
-#X connect 41 0 46 0;
-#X connect 42 0 47 0;
-#X connect 43 0 44 0;
-#X connect 43 0 45 0;
-#X connect 44 0 41 0;
-#X connect 45 0 42 0;
+#X connect 41 0 45 0;
+#X connect 42 0 46 0;
+#X connect 43 0 41 0;
+#X connect 44 0 42 0;
+#X connect 47 0 43 0;
+#X connect 47 0 44 0;
 #X coords 0 -1 1 1 200 150 1 435 670;

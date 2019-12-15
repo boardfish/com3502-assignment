@@ -1,4 +1,4 @@
-#N canvas 945 89 925 991 12;
+#N canvas 935 89 925 991 12;
 #X obj 406 749 wsprobe~;
 #X floatatom 342 398 5 0 0 0 - frequencyshift -;
 #X obj 288 545 hilbert~;
@@ -15,12 +15,12 @@
 #X floatatom 569 196 10 0 0 0 - frequencyshift -;
 #X obj 572 169 hsl 128 15 -1000 1000 0 0 frequencyshift frequencyshift
 Frequency_Shift -2 -8 0 10 -262144 -1 -1 6350 1;
-#X obj 650 198 bng 15 250 50 0 reset empty RESET 19 8 0 10 -262144
--1 -1;
-#X obj 557 339 receive reset;
+#X obj 650 198 bng 15 250 50 0 frequency_shifter_reset empty RESET
+19 8 0 10 -262144 -1 -1;
 #X msg 556 388 0;
 #X obj 555 524 send frequencyshift;
 #X floatatom 560 460 5 0 0 0 - - -;
+#X obj 557 339 receive frequency_shifter_reset;
 #X connect 1 0 8 0;
 #X connect 2 0 3 0;
 #X connect 2 1 4 0;
@@ -35,7 +35,7 @@ Frequency_Shift -2 -8 0 10 -262144 -1 -1 6350 1;
 #X connect 9 0 6 0;
 #X connect 10 0 7 0;
 #X connect 12 0 2 0;
-#X connect 16 0 17 0;
-#X connect 17 0 19 0;
-#X connect 19 0 18 0;
+#X connect 16 0 18 0;
+#X connect 18 0 17 0;
+#X connect 19 0 16 0;
 #X coords 0 -1 1 1 150 90 1 560 135;

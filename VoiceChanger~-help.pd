@@ -1,10 +1,16 @@
-#N canvas 995 89 925 991 12;
-#X obj 270 715 output~;
-#X obj 29 347 FrequencyShifter~;
-#X obj 32 189 Vibrato~;
-#X obj 265 489 VoiceChanger~ recording;
-#X obj 378 189 Delay~;
-#X obj 266 566 GraphicEqualiser~;
+#N canvas 70 89 925 991 12;
+#X obj 42 496 output~;
+#X obj 530 125 FrequencyShifter~;
+#X obj 40 127 Vibrato~;
+#X obj 39 292 VoiceChanger~ recording;
+#X obj 305 126 Delay~;
+#X obj 39 363 GraphicEqualiser~;
+#X text 213 281 Options: [recording] - use speech.wav from the current
+directory as the input [voice] - use an [adc~] object as the input
+\, taking from the system mic;
+#X text 40 20 VoiceChanger~ by Simon Fish and Zheming Qiu Use the sliders
+on the objects below to adjust the settings \, and click the RESET_ALL
+bang to reset them back to default values.;
 #X connect 3 0 5 0;
 #X connect 5 0 0 0;
 #X connect 5 0 0 1;

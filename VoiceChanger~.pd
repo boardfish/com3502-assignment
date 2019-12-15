@@ -24,6 +24,12 @@
 #X obj 760 321 send source;
 #X obj 21 387 Delay~;
 #X obj 371 404 delwrite~ delayline 1000;
+#X obj 883 581 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 810 658 send delay_reset;
+#X obj 987 658 send vibrato_reset;
+#X obj 1150 658 send frequency_shifter_reset;
+#X obj 702 661 send lfo_reset;
 #X connect 0 0 18 0;
 #X connect 1 0 4 0;
 #X connect 3 0 1 0;
@@ -49,3 +55,7 @@
 #X connect 18 0 23 0;
 #X connect 19 0 18 2;
 #X connect 22 0 3 0;
+#X connect 24 0 28 0;
+#X connect 24 0 25 0;
+#X connect 24 0 26 0;
+#X connect 24 0 27 0;

@@ -1,4 +1,4 @@
-#N canvas 955 89 925 991 12;
+#N canvas 855 89 925 991 12;
 #X floatatom 122 62 5 0 0 0 - - -;
 #X obj 97 111 *~;
 #X obj 243 112 *~;
@@ -23,6 +23,7 @@
 #X obj 352 242 receive mixer_reset;
 #X obj 286 287 f \$1;
 #X obj 224 308 inlet;
+#X obj 247 341 clip 0 1;
 #X connect 0 0 1 1;
 #X connect 1 0 5 0;
 #X connect 2 0 5 1;
@@ -42,5 +43,6 @@
 #X connect 18 0 2 0;
 #X connect 19 0 16 0;
 #X connect 20 0 13 0;
-#X connect 21 0 13 0;
+#X connect 21 0 22 0;
+#X connect 22 0 13 0;
 #X coords 0 -1 1 1 145 80 1 420 40;

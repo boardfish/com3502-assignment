@@ -1,22 +1,27 @@
 #N canvas 70 89 1850 991 12;
-#X obj 388 397 Mixer~;
-#X obj 264 138 loadbang;
-#X obj 268 194 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 143 358 Mixer~;
+#X obj 25 128 loadbang;
+#X obj 25 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 25 219 open speech.wav;
+#X obj 25 282 readsf~;
+#X obj 145 189 delay 500;
+#X msg 145 262 start;
+#X obj 229 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 265 258 open speech.wav;
-#X obj 275 324 readsf~;
-#X obj 117 211 delay 500;
-#X msg 121 260 start;
-#X obj 642 197 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 649 327 readsf~;
-#X obj 491 214 delay 500;
-#X msg 495 263 start;
-#X msg 639 261 open makehaste.wav;
-#X obj 397 520 output~;
-#X obj 637 138 loadbang;
-#X text 792 260 Credit: "Showdown - Make Haste!" Jake Kaufman \, Shovel
-Knight: King of Cards OST;
+#X obj 229 285 readsf~;
+#X obj 331 189 delay 500;
+#X msg 332 265 start;
+#X msg 229 223 open makehaste.wav;
+#X obj 142 472 output~;
+#X obj 229 124 loadbang;
+#X text 382 222 Credit: "Showdown - Make Haste!" Jake Kaufman \, Shovel
+Knight: King of Cards OST. Freely available on virt.bandcamp.com Base
+WAV is louder than speech sample \, hence imbalance.;
+#X text 23 14 Mixer - combines two audio signals in the balance shown
+on the slider. Can also take values between 0 and 1 inclusive on its
+right inlet to set the balance.;
+#X floatatom 294 321 5 0 1 0 - - -;
 #X connect 0 0 12 0;
 #X connect 0 0 12 1;
 #X connect 1 0 2 0;
@@ -35,3 +40,4 @@ Knight: King of Cards OST;
 #X connect 10 0 8 0;
 #X connect 11 0 8 0;
 #X connect 13 0 7 0;
+#X connect 16 0 0 2;

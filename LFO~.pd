@@ -1,4 +1,4 @@
-#N canvas 70 89 1850 991 12;
+#N canvas 300 174 1309 854 12;
 #X floatatom 465 327 5 0 0 0 - depth -;
 #X obj 435 511 *~;
 #X obj 469 370 *~ 0.01;
@@ -8,9 +8,9 @@
 #X obj 444 710 bng 15 250 50 0 lfo_reset empty RESET 17 7 0 10 -262144
 -1 -1;
 #X obj 448 749 hsl 128 15 0 50 0 0 speed speed SPEED -2 -8 0 10 -262144
--1 -1 6350 1;
+-1 -1 6500 1;
 #X obj 448 788 hsl 128 15 0 1 0 0 depth depth DEPTH -2 -8 0 10 -262144
--1 -1 3810 1;
+-1 -1 7100 1;
 #X floatatom 588 746 5 0 0 0 - speed -;
 #X floatatom 588 786 5 0 0 0 - depth -;
 #X text 532 696 sine;
@@ -45,7 +45,7 @@
 #X restore 1112 338 graph;
 #X obj 518 595 tabwrite~ amplitude;
 #X obj 534 550 metro 100;
-#X obj 559 499 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 559 499 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 742 148 loadbang;
 #X obj 698 318 f \$1;
@@ -55,9 +55,12 @@
 #X obj 690 370 send speed;
 #X obj 851 373 send depth;
 #X obj 860 148 receive lfo_reset;
+#X obj 755 615 wsprobe~;
+#X obj 220 261 loadbang;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 1 0 37 0;
+#X connect 1 0 48 0;
 #X connect 2 0 1 1;
 #X connect 14 0 19 0;
 #X connect 17 0 18 0;
@@ -88,4 +91,5 @@
 #X connect 44 0 42 0;
 #X connect 47 0 43 0;
 #X connect 47 0 44 0;
+#X connect 49 0 26 0;
 #X coords 0 -1 1 1 200 150 1 435 670;

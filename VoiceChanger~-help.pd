@@ -1,4 +1,4 @@
-#N canvas 462 89 925 991 12;
+#N canvas 412 89 925 991 12;
 #X obj 43 460 output~;
 #X obj 451 90 FrequencyShifter~;
 #X obj 41 91 Vibrato~;
@@ -15,11 +15,11 @@ directory as the input [voice] - use an [adc~] object as the input
 #X floatatom 303 197 5 0 0 0 - feedback -;
 #X obj 355 202 bng 15 250 50 0 delay_reset empty RESET 19 8 0 10 -262144
 -1 -1;
+#X obj 623 91 Gate~;
+#X obj 40 256 VoiceChanger~ recording;
 #X text 40 20 VoiceChanger~ by Simon Fish Use the sliders on the objects
 below to adjust the settings \, and click the RESET_ALL bang to reset
 them back to default values.;
-#X obj 623 91 Gate~;
-#X obj 40 256 VoiceChanger~ recording;
 #X connect 3 0 0 0;
 #X connect 3 0 0 1;
-#X connect 13 0 3 0;
+#X connect 12 0 3 0;

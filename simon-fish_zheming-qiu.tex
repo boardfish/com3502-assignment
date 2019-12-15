@@ -126,10 +126,9 @@ When the feedback value of the sound reaches 1, the audio cannot be heard clearl
 {\color{red}{\bfseries QUESTION \myq\ \emph{(worth up to 50 marks\footnote{25 for functionality, 15 for design/layout, 5 for \texttt{Pd} features, 5 for innovations})}}\\Please provide a short\footnote{no more than 500 words} description of the operation of your \texttt{[VoiceChanger]} application, together with a screenshot of your final GUI.}
 \\
 \begin{mdframed}
-Replace this text with your answer.  Replace this text with your answer.  Replace this text with your answer.  Replace this text with your answer.  Replace this text with your answer.  Replace this text with your answer.  Replace this text with your answer.  Replace this text with your answer.  Replace this text with your answer.  Replace this text with your answer.  Replace this text with your answer.  Replace this text with your answer.  Replace this text with your answer.  Replace this text with your answer.  Replace this text with your answer.
-\begin{figure}[H]
+I developed our voice changer as its own patch using pd-vanilla on Linux. It can be launched as \texttt{VoiceChanger-help.pd}. I'm hoping it should work out of the box on pd-extended, but I used pd-vanilla with ELSE during development. I was able to include many features I'd worked on in earlier sections of the assignment as abstractions - frequency shift, delay/feedback, and vibrato are all present. Additionally, I built a gate abstraction, which silences the input at regular intervals. Voice input via \texttt{[adc]} or pre-recorded input from \texttt{speech.wav} can be selected by supplying the \texttt{voice} or \texttt{recording} arguments respectively to \texttt{[VoiceChanger]}. I wasn't able to get some elements working, namely tremolo and flanger, due to some issues developing with the LFO. \begin{figure}[H]
   \begin{center}
-    \frame{\includegraphics[width=0.6\textwidth]{screenshot.jpg}}
+    \frame{\includegraphics[width=0.6\textwidth]{voicechanger.png}}
   \end{center}
 \end{figure}
 \end{mdframed}

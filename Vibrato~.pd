@@ -1,4 +1,4 @@
-#N canvas 995 89 925 991 12;
+#N canvas 985 89 925 991 12;
 #X obj 406 749 wsprobe~;
 #X obj 288 545 hilbert~;
 #X obj 294 591 *~;
@@ -11,7 +11,7 @@
 #X obj 255 234 inlet~;
 #X floatatom 719 166 10 0 0 0 - speed -;
 #X obj 572 169 hsl 128 15 0 50 0 0 speed speed Speed -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 3000 1;
 #X obj 721 224 bng 15 250 50 0 vibrato_reset empty RESET 19 8 0 10
 -262144 -1 -1;
 #X msg 556 388 0;
@@ -32,9 +32,10 @@
 #X obj 641 524 send depth;
 #X floatatom 719 198 10 0 0 0 - depth -;
 #X obj 572 201 hsl 128 15 0 1 0 0 depth depth Depth -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 4200 1;
 #X msg 415 323 70;
 #X obj 557 339 receive vibrato_reset;
+#X obj 444 280 loadbang;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
 #X connect 2 0 4 0;
@@ -63,4 +64,5 @@
 #X connect 31 0 22 0;
 #X connect 32 0 13 0;
 #X connect 32 0 26 0;
+#X connect 33 0 31 0;
 #X coords 0 -1 1 1 250 130 1 560 125;

@@ -9,10 +9,10 @@
 #X obj 275 324 inlet~;
 #X obj 262 745 outlet~;
 #X obj 299 635 +~;
-#X obj 94 73 hsl 128 15 1 1000 0 0 delay delay delay -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 94 73 hsl 128 15 0 1000 0 0 delay delay delay -2 -8 0 10 -262144
+-1 -1 3300 1;
 #X obj 93 125 hsl 128 15 0 1 0 0 feedback feedback feedback -2 -8 0
-10 -262144 -1 -1 0 1;
+10 -262144 -1 -1 3000 1;
 #X floatatom 243 71 5 0 0 0 - delay -;
 #X floatatom 244 124 5 0 0 0 - feedback -;
 #X obj 483 742 s~ feedbackloop;
@@ -25,6 +25,7 @@
 #X floatatom 658 232 5 0 0 0 - - -;
 #X obj 660 288 send feedback;
 #X obj 606 134 receive delay_reset;
+#X obj 351 373 delwrite~ delayline 1000;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 9 1;
@@ -32,6 +33,7 @@
 #X connect 5 0 6 1;
 #X connect 6 0 14 0;
 #X connect 7 0 9 0;
+#X connect 7 0 23 0;
 #X connect 9 0 0 0;
 #X connect 9 0 6 0;
 #X connect 9 0 8 0;

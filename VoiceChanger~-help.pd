@@ -1,8 +1,8 @@
-#N canvas 875 89 925 991 12;
+#N canvas 995 89 925 991 12;
 #X obj 270 715 output~;
 #X obj 29 347 FrequencyShifter~;
 #X obj 32 189 Vibrato~;
-#X obj 267 520 VoiceChanger~ recording;
+#X obj 265 489 VoiceChanger~ recording;
 #X obj 378 189 Delay~;
 #X obj 266 566 GraphicEqualiser~;
 #X connect 3 0 5 0;

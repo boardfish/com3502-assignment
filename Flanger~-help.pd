@@ -9,6 +9,9 @@
 #X obj 259 589 output~;
 #X obj 356 353 delwrite~ delayline 1000;
 #X obj 316 404 Flanger~;
+#X text 18 20 Flanger - as with Tremolo \, this was incomplete. However
+\, I've adapted it to make a sort of echoey Dalek effect using a glitch
+in Sigmund that outputs -1500 whenever the pitch is too low.;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 1 0 2 0;

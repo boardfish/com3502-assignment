@@ -1,14 +1,19 @@
 #N canvas 70 89 925 991 12;
-#X obj 264 138 loadbang;
-#X obj 268 194 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X msg 265 258 open speech.wav;
-#X obj 275 324 readsf~;
-#X obj 117 211 delay 500;
-#X msg 121 260 start;
-#X obj 259 589 output~;
-#X obj 295 394 Delay~;
-#X obj 356 353 delwrite~ delayline 1000;
+#X obj 12 123 loadbang;
+#X obj 12 180 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 12 240 open speech.wav;
+#X obj 12 288 readsf~;
+#X obj 158 205 delay 500;
+#X msg 157 240 start;
+#X obj 13 513 output~;
+#X obj 13 344 Delay~;
+#X obj 43 318 delwrite~ delayline 1000;
+#X text 13 5 Delay~ - returns the input signal with a repeat of itself
+shortly afterwards. WARNING: This patch (delay~-help) has a strange
+interaction with VoiceChanger wherein the delay is cancelled if both
+are open in the same Pd session. This is likely due to an issue with
+delayline.;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 1 0 2 0;

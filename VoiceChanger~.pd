@@ -23,7 +23,7 @@
 #X obj 603 283 send source;
 #X obj 760 321 send source;
 #X obj 21 387 Delay~;
-#X obj 594 661 delwrite~ delayline 1000;
+#X obj 371 404 delwrite~ delayline 1000;
 #X connect 0 0 18 0;
 #X connect 1 0 4 0;
 #X connect 3 0 1 0;
@@ -46,5 +46,6 @@
 #X connect 16 0 20 0;
 #X connect 17 0 21 0;
 #X connect 18 0 22 0;
+#X connect 18 0 23 0;
 #X connect 19 0 18 2;
 #X connect 22 0 3 0;

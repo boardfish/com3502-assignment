@@ -1,4 +1,4 @@
-#N canvas 246 99 925 991 12;
+#N canvas 70 89 925 991 12;
 #X obj 380 746 wsprobe~;
 #X floatatom 329 498 5 0 0 0 - delay -;
 #X obj 331 532 sig~;
@@ -16,15 +16,15 @@
 #X floatatom 243 71 5 0 0 0 - delay -;
 #X floatatom 244 124 5 0 0 0 - feedback -;
 #X obj 483 742 s~ feedbackloop;
-#X obj 195 158 bng 15 250 50 0 reset empty RESET 19 8 0 10 -262144
+#X obj 195 158 bng 15 250 50 0 delay_reset empty RESET 19 8 0 10 -262144
 -1 -1;
-#X obj 606 134 receive reset;
 #X msg 573 188 0;
 #X msg 655 186 0;
 #X obj 557 285 send delay;
 #X floatatom 566 229 5 0 0 0 - - -;
 #X floatatom 658 232 5 0 0 0 - - -;
 #X obj 660 288 send feedback;
+#X obj 606 134 receive delay_reset;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 9 1;
@@ -35,10 +35,10 @@
 #X connect 9 0 0 0;
 #X connect 9 0 6 0;
 #X connect 9 0 8 0;
-#X connect 16 0 17 0;
-#X connect 16 0 18 0;
+#X connect 16 0 19 0;
 #X connect 17 0 20 0;
-#X connect 18 0 21 0;
-#X connect 20 0 19 0;
-#X connect 21 0 22 0;
+#X connect 19 0 18 0;
+#X connect 20 0 21 0;
+#X connect 22 0 16 0;
+#X connect 22 0 17 0;
 #X coords 0 -1 1 1 215 145 1 80 40;
